@@ -1,4 +1,4 @@
-==Below is a list of required technologies / applications==
+==Below is a list of required technologies / applications for the AGI script==
 
   * Asterisk
   * fax4asterisk
