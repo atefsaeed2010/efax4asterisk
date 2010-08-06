@@ -5,3 +5,5 @@
   * bash shell
   * tiff2pdf
   * mutt
+
+===You need to have all of the above working. Please do not contact me for support.=== 
