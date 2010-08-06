@@ -1,0 +1,20 @@
+==Here's a sample dial plan:==
+{{{
+[macro-rx-fax]
+; ${ARG1} is Fax Number
+; ${ARG2} is Fax Recipient Email Address eg: user@domain.tld
+exten => s,1,NoOp(**** FAX RECEIVE ****)
+exten => s,n,Set(FAXOPT(ecm)=yes)
+exten => s,n,Set(FAXOPT(headerinfo)=Your Company)
+exten => s,n,Set(FAXOPT(localstationid)=${ARG1})
+exten => s,n,Set(FAX2EMAIL=${ARG2})
+exten => s,n,Set(FAXOPT(maxrate)=14400)
+exten => s,n,Set(FAXOPT(minrate)=2400)
+exten => s,n,Set(FAXFILE=${STRFTIME(${EPOCH},,%Y%m%d-%H%M%S)}-${CALLERID(number)})
+exten => s,n,ReceiveFAX(/var/spool/asterisk/fax/${FAXFILE}.tiff)
+exten => h,1,DeadAGI(convert-fax.sh|${FAXFILE}|${CALLERID(number)}|${CALLERID(name)}|${FAXOPT(remotestationid)}|${FAXOPT(pages)}|${FAXOPT(rate)}|${FAXOPT(resolution)}|${FAXOPT(status)}|${FAXOPT(statusstr)}|${FAXOPT(error)}|${FAX2EMAIL})
+exten => h,n,NoOp(FAXOPT(status) : ${FAXOPT(status)})
+exten => h,n,NoOp(FAXOPT(statusstr) : ${FAXOPT(statusstr)})
+exten => h,n,NoOp(FAXOPT(error) : ${FAXOPT(error)})
+; end of rxfax
+}}}
