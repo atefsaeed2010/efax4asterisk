@@ -20,7 +20,7 @@ exten => h,1,DeadAGI(efax4asterisk.sh|${FAXFILE}|${CALLERID(number)}|${CALLERID(
 exten => h,n,NoOp(FAXOPT(status) : ${FAXOPT(status)})
 exten => h,n,NoOp(FAXOPT(statusstr) : ${FAXOPT(statusstr)})
 exten => h,n,NoOp(FAXOPT(error) : ${FAXOPT(error)})
-; end of custom-rx-fax
+; end of macro-rx-fax
 
 
 [ext-did-0001-custom] ; Remove this line if you are not using (FreePBX or Trixbox)
