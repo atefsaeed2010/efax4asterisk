@@ -1,7 +1,7 @@
 ==Below is a list of required technologies / applications for the AGI script==
 
-  * Asterisk
-  * fax4asterisk
-  * bash shell
+  * [http://www.asterisk.org Asterisk]
+  * [http://www.digium.com/en/products/software/faxforasterisk.php fax4asterisk] and appropriate license(s)
+  * Bash
   * tiff2pdf
   * mutt
