@@ -1,6 +1,9 @@
-==Here's a sample dial plan:==
+=Sample dial plans=
+
+==FreePBX==
+*In config: extensions_custom.conf*
 {{{
-[rx-fax]
+[macro-rx-fax]
 ; ${ARG1} is Fax Number
 ; ${ARG2} is Fax Recipient Email Address eg: user@domain.tld
 exten => s,1,NoOp(**** FAX RECEIVE ****)
@@ -18,3 +21,6 @@ exten => h,n,NoOp(FAXOPT(statusstr) : ${FAXOPT(statusstr)})
 exten => h,n,NoOp(FAXOPT(error) : ${FAXOPT(error)})
 ; end of rx-fax
 }}}
+*Extension:*
+
+exten => 8005551212,1,Macro(rx-fax,8005551212,user@domain.tld) 
