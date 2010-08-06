@@ -5,3 +5,5 @@
   * Bash
   * tiff2pdf
   * mutt
+  * echo
+  * rm
