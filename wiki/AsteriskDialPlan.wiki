@@ -19,7 +19,7 @@ exten => h,1,DeadAGI(convert-fax.sh|${FAXFILE}|${CALLERID(number)}|${CALLERID(na
 exten => h,n,NoOp(FAXOPT(status) : ${FAXOPT(status)})
 exten => h,n,NoOp(FAXOPT(statusstr) : ${FAXOPT(statusstr)})
 exten => h,n,NoOp(FAXOPT(error) : ${FAXOPT(error)})
-; end of rx-fax
+; end of custom-rx-fax
 
 
 [ext-did-0001-custom]
