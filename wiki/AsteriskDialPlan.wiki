@@ -1,7 +1,7 @@
-=Sample dial plans=
+=Sample dial plans for Asterisk Systems=
 
 ==FreePBX==
-*In config: extensions_custom.conf*
+*Configuration file: extensions_custom.conf*
 {{{
 [macro-rx-fax]
 ; ${ARG1} is Fax Number
@@ -20,7 +20,8 @@ exten => h,n,NoOp(FAXOPT(status) : ${FAXOPT(status)})
 exten => h,n,NoOp(FAXOPT(statusstr) : ${FAXOPT(statusstr)})
 exten => h,n,NoOp(FAXOPT(error) : ${FAXOPT(error)})
 ; end of rx-fax
-}}}
-*Extension:*
 
-exten => 8005551212,1,Macro(rx-fax,8005551212,user@domain.tld) 
+
+[ext-did-0001-custom]
+exten => 8005551212,1,Macro(rx-fax,8005551212,user@domain.tld)
+}}}
