@@ -1,7 +1,7 @@
-=Sample dial plans for Asterisk Systems=
+==Sample dial plans for Asterisk Systems==
 
-==FreePBX & Trixbox==
-*Configuration file: extensions_custom.conf*
+*Configuration file: extensions.conf (Asterisk)*
+*Configuration file: extensions_custom.conf (FreePBX & Trixbox)*
 {{{
 [macro-rx-fax]
 ; ${ARG1} is Fax Number
@@ -22,6 +22,6 @@ exten => h,n,NoOp(FAXOPT(error) : ${FAXOPT(error)})
 ; end of custom-rx-fax
 
 
-[ext-did-0001-custom]
+[ext-did-0001-custom] ; Remove this line if you are not using (FreePBX or Trixbox)
 exten => 8005551212,1,Macro(rx-fax,8005551212,user@domain.tld)
 }}}
