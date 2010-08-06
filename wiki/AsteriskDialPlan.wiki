@@ -1,6 +1,6 @@
 =Sample dial plans for Asterisk Systems=
 
-==FreePBX==
+==FreePBX & Trixbox==
 *Configuration file: extensions_custom.conf*
 {{{
 [macro-rx-fax]
