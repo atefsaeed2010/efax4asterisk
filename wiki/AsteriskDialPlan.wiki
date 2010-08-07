@@ -23,6 +23,6 @@ exten => h,n,NoOp(FAXOPT(error) : ${FAXOPT(error)})
 ; end of macro-rx-fax
 
 
-[ext-did-0001-custom] ; Remove this line if you are not using (FreePBX or Trixbox)
+[ext-did-custom] ; Remove this line if you are not using (FreePBX or Trixbox)
 exten => 8005551212,1,Macro(rx-fax,8005551212,user@domain.tld)
 }}}
